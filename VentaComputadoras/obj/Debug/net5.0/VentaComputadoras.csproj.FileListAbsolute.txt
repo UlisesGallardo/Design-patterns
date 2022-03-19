@@ -1,0 +1,16 @@
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\VentaComputadoras.exe
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\VentaComputadoras.deps.json
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\VentaComputadoras.runtimeconfig.json
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\VentaComputadoras.runtimeconfig.dev.json
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\VentaComputadoras.dll
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\ref\VentaComputadoras.dll
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\bin\Debug\net5.0\VentaComputadoras.pdb
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.csproj.AssemblyReference.cache
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.AssemblyInfoInputs.cache
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.AssemblyInfo.cs
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.csproj.CoreCompileInputs.cache
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.dll
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\ref\VentaComputadoras.dll
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.pdb
+C:\Users\Vladimir\Music\Proyectos C#\VentaComputadoras\VentaComputadoras\obj\Debug\net5.0\VentaComputadoras.genruntimeconfig.cache

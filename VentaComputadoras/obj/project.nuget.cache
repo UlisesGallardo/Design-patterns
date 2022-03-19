@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "V7sJdU38YwzyQpGYjXEQZTZJx4xRLXXLEdSte1zKjTukH3GEQb/8tjB0Xvi+hkWkMcAziWEaxGCY5r3hxiQqdg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vladimir\\Music\\Proyectos C#\\VentaComputadoras\\VentaComputadoras\\VentaComputadoras.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vladimir\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
