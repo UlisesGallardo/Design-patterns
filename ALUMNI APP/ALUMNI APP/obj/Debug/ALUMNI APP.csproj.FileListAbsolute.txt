@@ -1,0 +1,18 @@
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\ALUMNI APP.exe.config
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\ALUMNI APP.exe
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\ALUMNI APP.pdb
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.Properties.Resources.resources
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.csproj.GenerateResource.cache
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.csproj.CoreCompileInputs.cache
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.csproj.CopyComplete
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.exe
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.pdb
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.Form1.resources
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.StudentForm.resources
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.UserStudent.resources
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.csproj.AssemblyReference.cache
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\Guna.UI2.dll
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.BasicInformation.resources
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.Grades.resources
