@@ -16,9 +16,11 @@
 		"Password": "Password123"
 	}],
 	"Supervisors": [{
-		"ID_Supervisor": "0922371",
-		"Nombre": "Claudia Nallely Sánchez Gómez",
-		"Password": "Password12345"
+		"ID_Supervisor": "0229263",
+		"Name": "Claudia Nallely Sánchez Gómez",
+		"YearOfBirth": 1990,
+		"City": "Aguascalientes",
+		"Password": "Password"
 	}],
 
 	"SubjectsANDProfessors": [{
@@ -47,6 +49,15 @@
 			"SecondPartial": 9.0,
 			"ThirdPartial": 9.0,
 			"FinalAverage": 9.0
+		},
+		{
+			"ID_Professor": "0229262",
+			"ID_Student": "0229261",
+			"ID_Subject": "0006",
+			"FirstPartial": 10.0,
+			"SecondPartial": 9.0,
+			"ThirdPartial": 9.0,
+			"FinalAverage": 9.3
 		}
 	],
 	"Subjects": [{
@@ -67,6 +78,10 @@
 		{
 			"ID_Subject": "0005",
 			"Name": "Programación Orientada a Objetos"
+		},
+		{
+			"ID_Subject": "0006",
+			"Name": "Programación Avanzada"
 		}
 	]
 }

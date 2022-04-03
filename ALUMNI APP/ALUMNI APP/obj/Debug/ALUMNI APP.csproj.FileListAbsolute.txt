@@ -30,3 +30,4 @@ C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\Aspose.Cell
 C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\YamlDotNet.dll
 C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\Aspose.Cells.xml
 C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\YamlDotNet.xml
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.SupervisorForm.resources

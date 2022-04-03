@@ -14,9 +14,11 @@ Professors:
   Degree: Doctorado
   Password: Password123
 Supervisors:
-- ID_Supervisor: '0922371'
-  Nombre: Claudia Nallely Sánchez Gómez
-  Password: Password12345
+- ID_Supervisor: '0229263'
+  Name: Claudia Nallely Sánchez Gómez
+  YearOfBirth: 1990
+  City: Aguascalientes
+  Password: Password
 SubjectsANDProfessors:
 - ID_Professor: '0229262'
   ID_Subject: '0001'
@@ -37,6 +39,13 @@ Grades:
   SecondPartial: 9
   ThirdPartial: 9
   FinalAverage: 9
+- ID_Professor: '0229262'
+  ID_Student: '0229261'
+  ID_Subject: '0006'
+  FirstPartial: 10
+  SecondPartial: 9
+  ThirdPartial: 9
+  FinalAverage: 9.3
 Subjects:
 - ID_Subject: '0001'
   Name: Patrones de Diseño y Arquitecturas de Software
@@ -48,3 +57,5 @@ Subjects:
   Name: Machine Learning
 - ID_Subject: '0005'
   Name: Programación Orientada a Objetos
+- ID_Subject: '0006'
+  Name: Programación Avanzada

@@ -32,42 +32,12 @@ namespace ALUMNI_APP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            password = PasswordUser.Text;
-            ID = ID_User.Text;
-
-            if (isStudent())
-            {
-                StudentForm userStudent = new StudentForm();
-                this.Hide();
-                userStudent.ID = ID;
-                userStudent.Show();
-            }else if (isProfessor())
-            {
-                ProfessorForm userProfessor = new ProfessorForm();
-                this.Hide();
-                userProfessor.ID = ID;
-                userProfessor.Show();
-            }
-            else if (isSupervisor())
-            {
-
-            }
-            else
-            {
-                MessageBox.Show("Credenciales invalidas! Intenta de nuevo");
-            }
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        //Para cambiar los paneles
-        private void AddUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            //panel
         }
 
         bool isStudent()
@@ -116,6 +86,38 @@ namespace ALUMNI_APP
             }
             if (i > 0) return true;
             return false;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            password = PasswordUser.Text;
+            ID = ID_User.Text;
+
+            if (isStudent())
+            {
+                StudentForm userStudent = new StudentForm();
+                this.Hide();
+                userStudent.ID = ID;
+                userStudent.Show();
+            }
+            else if (isProfessor())
+            {
+                ProfessorForm userProfessor = new ProfessorForm();
+                this.Hide();
+                userProfessor.ID = ID;
+                userProfessor.Show();
+            }
+            else if (isSupervisor())
+            {
+                SupervisorForm userStudent = new SupervisorForm();
+                this.Hide();
+                userStudent.ID = ID;
+                userStudent.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials! Try it again");
+            }
         }
     }
 }
