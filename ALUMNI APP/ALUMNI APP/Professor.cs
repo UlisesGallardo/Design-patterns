@@ -88,6 +88,9 @@ namespace ALUMNI_APP
             tb_grades.Columns.Add(new DataColumn("P3", typeof(string)));
             tb_grades.Columns.Add(new DataColumn("Final", typeof(string)));
 
+            //tb_grades.Columns[1]. = 100;  // or whatever width you want ^_*
+            //tb_grades.
+
             List<JToken> students = new List<JToken>();
             students = GetCalifications();
 

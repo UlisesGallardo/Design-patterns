@@ -27,7 +27,7 @@ namespace ALUMNI_APP
         private void BasicInformation_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add(new DataColumn("Props"));
+            dt.Columns.Add(new DataColumn("Information"));
             dt.Columns.Add(new DataColumn("Values"));
             DataRow dr = null;
 
@@ -35,11 +35,12 @@ namespace ALUMNI_APP
             foreach (var a in res)
             {
                 dr = dt.NewRow();
-                dr["Props"] = a.Prop;
+                dr["Information"] = a.Prop;
                 dr["Values"] = a.Value;
                 dt.Rows.Add(dr);
             }
             gridBasicInformation.DataSource = dt;
+            gridBasicInformation.ColumnHeadersHeight = 40;
             //gridBasicInformation.Columns.Add("Column", "Props");
             //gridBasicInformation.DataSource = NamesRows.Select(x => new { Props = x }).ToList();
             //gridBasicInformation.DataSource = info.Select(x => new { Value = x }).ToList();

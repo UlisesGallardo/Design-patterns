@@ -53,7 +53,7 @@ namespace ALUMNI_APP
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridBasicInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridBasicInformation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridBasicInformation.ColumnHeadersHeight = 4;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -66,6 +66,7 @@ namespace ALUMNI_APP
             this.gridBasicInformation.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridBasicInformation.Location = new System.Drawing.Point(20, 21);
             this.gridBasicInformation.Name = "gridBasicInformation";
+            this.gridBasicInformation.ReadOnly = true;
             this.gridBasicInformation.RowHeadersVisible = false;
             this.gridBasicInformation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridBasicInformation.Size = new System.Drawing.Size(715, 285);
@@ -81,9 +82,9 @@ namespace ALUMNI_APP
             this.gridBasicInformation.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.gridBasicInformation.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.gridBasicInformation.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridBasicInformation.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridBasicInformation.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridBasicInformation.ThemeStyle.HeaderStyle.Height = 4;
-            this.gridBasicInformation.ThemeStyle.ReadOnly = false;
+            this.gridBasicInformation.ThemeStyle.ReadOnly = true;
             this.gridBasicInformation.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gridBasicInformation.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridBasicInformation.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);

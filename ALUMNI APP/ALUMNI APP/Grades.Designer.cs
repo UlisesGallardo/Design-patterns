@@ -67,7 +67,9 @@ namespace ALUMNI_APP
             this.GradeGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.GradeGrid.Location = new System.Drawing.Point(24, 3);
             this.GradeGrid.Name = "GradeGrid";
+            this.GradeGrid.ReadOnly = true;
             this.GradeGrid.RowHeadersVisible = false;
+            this.GradeGrid.RowHeadersWidth = 100;
             this.GradeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GradeGrid.Size = new System.Drawing.Size(697, 260);
             this.GradeGrid.TabIndex = 0;
@@ -84,7 +86,7 @@ namespace ALUMNI_APP
             this.GradeGrid.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.GradeGrid.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.GradeGrid.ThemeStyle.HeaderStyle.Height = 4;
-            this.GradeGrid.ThemeStyle.ReadOnly = false;
+            this.GradeGrid.ThemeStyle.ReadOnly = true;
             this.GradeGrid.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.GradeGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.GradeGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -92,6 +94,8 @@ namespace ALUMNI_APP
             this.GradeGrid.ThemeStyle.RowsStyle.Height = 22;
             this.GradeGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.GradeGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.GradeGrid.CancelRowEdit += new System.Windows.Forms.QuestionEventHandler(this.GradeGrid_CancelRowEdit);
+            this.GradeGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GradeGrid_CellContentClick);
             // 
             // Btn_Download
             // 
