@@ -20,7 +20,7 @@ namespace ALUMNI_APP
         User user = null;
 
         private List<string> info;
-        private IEnumerable<JToken> searchResultsGrades;
+        private List<JToken> searchResultsGrades;
         private DataTable tb_grades { get; set; }
 
         public StudentForm()
@@ -60,12 +60,20 @@ namespace ALUMNI_APP
             //Grades -> Subject | p1 | p2 | p3 | Final
             Grades grades = new Grades();
             grades.dt = tb_grades;
+            grades.user = "Student";
             AddUserControl(grades);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             
+            var formToShow = Application.OpenForms.Cast<Form>()
+            .FirstOrDefault(c => c is Form1);
+                    if (formToShow != null)
+                    {
+                        formToShow.Show();
+                    }
+            this.Dispose();
         }
         private void AddUserControl(UserControl userControl)
         {

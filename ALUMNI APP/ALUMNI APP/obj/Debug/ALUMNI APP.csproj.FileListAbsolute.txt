@@ -16,3 +16,4 @@ C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI APP.
 C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\bin\Debug\Guna.UI2.dll
 C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.BasicInformation.resources
 C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.Grades.resources
+C:\Users\Vladimir\Music\Proyectos C#\ALUMNI APP\ALUMNI APP\obj\Debug\ALUMNI_APP.ProfessorForm.resources

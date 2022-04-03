@@ -8,25 +8,30 @@
 		"Password": "Password123"
 	}],
 	"Professors": [{
-		"ID_Professor": "0926712",
+		"ID_Professor": "0229262",
 		"Name": "Lidia Chávez López",
-		"Password": "Password12345"
+		"YearOfBirth": 1990,
+		"City": "Aguascalientes",
+		"Degree":"Doctorado",
+		"Password": "Password123"
 	}],
 	"Supervisors": [{
 		"ID_Supervisor": "0922371",
-		"Nombre": "Claudia Nallely Sánchez Gómez"
+		"Nombre": "Claudia Nallely Sánchez Gómez",
+		"Password": "Password12345"
 	}],
 
 	"SubjectsANDProfessors": [{
-			"ID_Professor": "0926712",
+			"ID_Professor": "0229262",
 			"ID_Subject": "0001"
 		},
 		{
-			"ID_Professor": "0926712",
+			"ID_Professor": "0229262",
 			"ID_Subject": "0005"
 		}
 	],
 	"Grades": [{
+			"ID_Professor": "0229262",
 			"ID_Student": "0229261",
 			"ID_Subject": "0001",
 			"FirstPartial": 9.0,
@@ -35,6 +40,7 @@
 			"FinalAverage": 9.0
 		},
 		{
+			"ID_Professor": "0229262",
 			"ID_Student": "0229261",
 			"ID_Subject": "0005",
 			"FirstPartial": 9.0,

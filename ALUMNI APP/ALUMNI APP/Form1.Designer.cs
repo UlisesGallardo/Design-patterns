@@ -45,7 +45,7 @@ namespace ALUMNI_APP
             this.Title.Size = new System.Drawing.Size(72, 13);
             this.Title.TabIndex = 0;
             this.Title.Text = "ALUMNI APP";
-            this.Title.Click += new System.EventHandler(this.label1_Click);
+            //this.Title.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 

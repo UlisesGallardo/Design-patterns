@@ -60,22 +60,23 @@ namespace ALUMNI_APP
             return info;
         }
 
-        public override IEnumerable<JToken> GetCalifications()
+        public override List<JToken> GetCalifications()
         {
             DataBase foo = DataBase.GetInstance();
             JObject json = foo.Query();
             var searchResults = from rr in json["Grades"]
                                 where rr["ID_Student"].ToString() == ID
                                 select rr;
+            List<JToken> lista = new List<JToken>();
             
-            /*
-                Console.WriteLine("Entrando a las calificaciones del alumno:");
-                foreach (var rr in searchResults)
-                {
-                    Console.WriteLine(rr);
-                }
-            */
-            return searchResults;
+            //Console.WriteLine("Entrando a las calificaciones del alumno:");
+            foreach (var rr in searchResults)
+            {
+                //Console.WriteLine(rr);
+                lista.Add(rr);
+            }
+            
+            return lista;
         }
 
         public void DonwloadCalifications()
@@ -103,8 +104,10 @@ namespace ALUMNI_APP
             tb_grades.Columns.Add(new DataColumn("P3", typeof(string)));
             tb_grades.Columns.Add(new DataColumn("Final", typeof(string)));
 
-            var searchResultsGrades = GetCalifications();
-            foreach (var rr in searchResultsGrades)
+            List<JToken> list = new List<JToken>();
+            list = GetCalifications();
+
+            foreach (var rr in list)
             {
                 string id_subject = rr["ID_Subject"].ToString();
 

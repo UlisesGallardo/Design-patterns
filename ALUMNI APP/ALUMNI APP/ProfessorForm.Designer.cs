@@ -1,7 +1,7 @@
 ﻿
 namespace ALUMNI_APP
 {
-    partial class StudentForm
+    partial class ProfessorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,36 +29,38 @@ namespace ALUMNI_APP
         /// </summary>
         private void InitializeComponent()
         {
-            this.Title1 = new System.Windows.Forms.Label();
-            this.guna2Buttons = new Guna.UI2.WinForms.Guna2Button();
+            this.Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.panelContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.panelContainer = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // Title1
+            // Title
             // 
-            this.Title1.AutoSize = true;
-            this.Title1.Location = new System.Drawing.Point(359, 19);
-            this.Title1.Name = "Title1";
-            this.Title1.Size = new System.Drawing.Size(70, 13);
-            this.Title1.TabIndex = 0;
-            this.Title1.Text = "Student View";
+            this.Title.BackColor = System.Drawing.Color.Transparent;
+            this.Title.Location = new System.Drawing.Point(333, 28);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(80, 15);
+            this.Title.TabIndex = 0;
+            this.Title.Text = "Professor\'s View";
+            this.Title.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.Title.Click += new System.EventHandler(this.Title_Click);
             // 
-            // guna2Buttons
+            // guna2Button1
             // 
-            this.guna2Buttons.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Buttons.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Buttons.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Buttons.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Buttons.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Buttons.ForeColor = System.Drawing.Color.White;
-            this.guna2Buttons.Location = new System.Drawing.Point(44, 61);
-            this.guna2Buttons.Name = "guna2Buttons";
-            this.guna2Buttons.Size = new System.Drawing.Size(180, 45);
-            this.guna2Buttons.TabIndex = 1;
-            this.guna2Buttons.Text = "Basic Information";
-            this.guna2Buttons.Click += new System.EventHandler(this.guna2Buttons_Click);
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(79, 73);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 1;
+            this.guna2Button1.Text = "Basic Information";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
             // 
@@ -68,12 +70,19 @@ namespace ALUMNI_APP
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(290, 61);
+            this.guna2Button2.Location = new System.Drawing.Point(333, 73);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 2;
-            this.guna2Button2.Text = "Grades";
+            this.guna2Button2.Text = "Grade\'s Students";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // panelContainer
+            // 
+            this.panelContainer.Location = new System.Drawing.Point(12, 124);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(776, 314);
+            this.panelContainer.TabIndex = 3;
             // 
             // guna2Button3
             // 
@@ -83,35 +92,28 @@ namespace ALUMNI_APP
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(549, 61);
+            this.guna2Button3.Location = new System.Drawing.Point(593, 73);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button3.TabIndex = 3;
+            this.guna2Button3.TabIndex = 4;
             this.guna2Button3.Text = "Sign off";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
-            // panelContainer
-            // 
-            this.panelContainer.Location = new System.Drawing.Point(21, 112);
-            this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(767, 326);
-            this.panelContainer.TabIndex = 4;
-            // 
-            // StudentForm
+            // ProfessorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Buttons);
-            this.Controls.Add(this.Title1);
-            this.Name = "StudentForm";
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.Title);
+            this.Name = "ProfessorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StudentForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentForm_FormClosed);
-            this.Load += new System.EventHandler(this.StudentForm_Load_1);
+            this.Text = "ProfessorForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProfessorForm_FormClosed);
+            this.Load += new System.EventHandler(this.ProfessorForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,10 +121,10 @@ namespace ALUMNI_APP
 
         #endregion
 
-        private System.Windows.Forms.Label Title1;
-        private Guna.UI2.WinForms.Guna2Button guna2Buttons;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Title;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Panel panelContainer;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private System.Windows.Forms.Panel panelContainer;
     }
 }

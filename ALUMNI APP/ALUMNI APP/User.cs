@@ -16,7 +16,7 @@ namespace ALUMNI_APP
         public string ID { set; get; }
         public string Password { set; get; }
         public abstract List<string> GetInformation();
-        public abstract IEnumerable<JToken> GetCalifications();
+        public abstract List<JToken> GetCalifications();
         public abstract DataTable GradesToTable();
     }
 }

@@ -24,7 +24,7 @@ namespace ALUMNI_APP
             return null;
         }
 
-        public override IEnumerable<JToken> GetCalifications()
+        public override List<JToken> GetCalifications()
         {
             return null;
         }

@@ -16,6 +16,7 @@ namespace ALUMNI_APP
     public partial class Grades : UserControl
     {
         public DataTable dt { get; set; }
+        public string user { get; set; }
 
         public Grades()
         {
@@ -25,6 +26,10 @@ namespace ALUMNI_APP
         private void Grades_Load(object sender, EventArgs e)
         {
             GradeGrid.DataSource = dt;
+            if(user == "Professor")
+            {
+                Btn_Download.Visible = false;
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

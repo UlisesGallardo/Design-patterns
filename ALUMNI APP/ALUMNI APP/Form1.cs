@@ -16,6 +16,8 @@ namespace ALUMNI_APP
 {
     public partial class Form1 : Form
     {
+        private string ID {get;set;}
+        private string password { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -26,39 +28,31 @@ namespace ALUMNI_APP
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string password, id;
             password = PasswordUser.Text;
-            id = ID_User.Text;
+            ID = ID_User.Text;
 
-            /*Singleton*/
-            DataBase foo = DataBase.GetInstance();
-            JObject json = foo.Query();
-            var searchResults = from rr in json["Students"]
-                                where rr["ID_Student"].ToString() == id && rr["Password"].ToString() == password
-                                select rr;
-            int i = 0;
-            foreach (var rr in searchResults)
+            if (isStudent())
             {
-                //Console.WriteLine(rr);
-                i++;
-            }
-            if (i == 0)
-            {
-                MessageBox.Show("Credenciales invalidas! Intenta de nuevo");
-            } else
-            {
-                //Instanciate a new winwdos form
                 StudentForm userStudent = new StudentForm();
                 this.Hide();
-                userStudent.ID = id;
+                userStudent.ID = ID;
                 userStudent.Show();
+            }else if (isProfessor())
+            {
+                ProfessorForm userProfessor = new ProfessorForm();
+                this.Hide();
+                userProfessor.ID = ID;
+                userProfessor.Show();
+            }
+            else if (isSupervisor())
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Credenciales invalidas! Intenta de nuevo");
             }
         }
 
@@ -72,6 +66,54 @@ namespace ALUMNI_APP
         {
             userControl.Dock = DockStyle.Fill;
             //panel
+        }
+
+        bool isStudent()
+        {
+            DataBase foo = DataBase.GetInstance();
+            JObject json = foo.Query();
+            var searchResults = from rr in json["Students"]
+                                where rr["ID_Student"].ToString() == ID && rr["Password"].ToString() == password
+                                select rr;
+            int i = 0;
+            foreach (var rr in searchResults)
+            {
+                i++;
+            }
+            if (i > 0) return true;
+            return false;
+        }
+
+        bool isProfessor()
+        {
+            DataBase foo = DataBase.GetInstance();
+            JObject json = foo.Query();
+            var searchResults = from rr in json["Professors"]
+                                where rr["ID_Professor"].ToString() == ID && rr["Password"].ToString() == password
+                                select rr;
+            int i = 0;
+            foreach (var rr in searchResults)
+            {
+                i++;
+            }
+            if (i > 0) return true;
+            return false;
+        }
+
+        bool isSupervisor()
+        {
+            DataBase foo = DataBase.GetInstance();
+            JObject json = foo.Query();
+            var searchResults = from rr in json["Supervisors"]
+                                where rr["ID_Supervisor"].ToString() == ID && rr["Password"].ToString() == password
+                                select rr;
+            int i = 0;
+            foreach (var rr in searchResults)
+            {
+                i++;
+            }
+            if (i > 0) return true;
+            return false;
         }
     }
 }
