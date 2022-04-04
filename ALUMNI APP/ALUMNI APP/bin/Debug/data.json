@@ -1,0 +1,87 @@
+{
+	"Students": [{
+		"ID_Student": "0229261",
+		"Name": "Ulises Gallardo Rodríguez",
+		"Carrer": "Ing.Inteligencia Artificial",
+		"YearOfBirth": 2001,
+		"City": "Aguascalientes",
+		"Password": "Password123"
+	}],
+	"Professors": [{
+		"ID_Professor": "0229262",
+		"Name": "Lidia Chávez López",
+		"YearOfBirth": 1990,
+		"City": "Aguascalientes",
+		"Degree":"Doctorado",
+		"Password": "Password123"
+	}],
+	"Supervisors": [{
+		"ID_Supervisor": "0229263",
+		"Name": "Claudia Nallely Sánchez Gómez",
+		"YearOfBirth": 1990,
+		"City": "Aguascalientes",
+		"Password": "Password"
+	}],
+
+	"SubjectsANDProfessors": [{
+			"ID_Professor": "0229262",
+			"ID_Subject": "0001"
+		},
+		{
+			"ID_Professor": "0229262",
+			"ID_Subject": "0005"
+		}
+	],
+	"Grades": [{
+			"ID_Professor": "0229262",
+			"ID_Student": "0229261",
+			"ID_Subject": "0001",
+			"FirstPartial": 9.0,
+			"SecondPartial": 9.0,
+			"ThirdPartial": 9.0,
+			"FinalAverage": 9.0
+		},
+		{
+			"ID_Professor": "0229262",
+			"ID_Student": "0229261",
+			"ID_Subject": "0005",
+			"FirstPartial": 9.0,
+			"SecondPartial": 9.0,
+			"ThirdPartial": 9.0,
+			"FinalAverage": 9.0
+		},
+		{
+			"ID_Professor": "0229262",
+			"ID_Student": "0229261",
+			"ID_Subject": "0006",
+			"FirstPartial": 10.0,
+			"SecondPartial": 9.0,
+			"ThirdPartial": 9.0,
+			"FinalAverage": 9.3
+		}
+	],
+	"Subjects": [{
+			"ID_Subject": "0001",
+			"Name": "Patrones de Diseño y Arquitecturas de Software"
+		},
+		{
+			"ID_Subject": "0002",
+			"Name": "Microcontroladores II"
+		}, {
+			"ID_Subject": "0003",
+			"Name": "Patrones de Diseño y Arquitecturas de Software"
+		},
+		{
+			"ID_Subject": "0004",
+			"Name": "Machine Learning"
+		},
+		{
+			"ID_Subject": "0005",
+			"Name": "Programación Orientada a Objetos"
+		},
+		{
+			"ID_Subject": "0006",
+			"Name": "Programación Avanzada"
+		}
+	]
+}

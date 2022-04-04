@@ -1,0 +1,66 @@
+{
+	"Students": [{
+		"ID_Student": "0229261",
+		"Name": "Ulises Gallardo Rodríguez",
+		"Carrer": "Ing.Inteligencia Artificial",
+		"YearOfBirth": 2001,
+		"City": "Aguascalientes",
+		"Password": "Password123"
+	}],
+	"Professors": [{
+		"ID_Professor": "0926712",
+		"Name": "Lidia Chávez López",
+		"Password": "Password12345"
+	}],
+	"Supervisors": [{
+		"ID_Supervisor": "0922371",
+		"Nombre": "Claudia Nallely Sánchez Gómez"
+	}],
+
+	"SubjectsANDProfessors": [{
+			"ID_Professor": "0926712",
+			"ID_Subject": "0001"
+		},
+		{
+			"ID_Professor": "0926712",
+			"ID_Subject": "0005"
+		}
+	],
+	"Grades": [{
+			"ID_Student": "0229261",
+			"ID_Subject": "0001",
+			"FirstPartial": 9.0,
+			"SecondPartial": 9.0,
+			"ThirdPartial": 9.0,
+			"FinalAverage": 9.0
+		},
+		{
+			"ID_Student": "0229261",
+			"ID_Materia": "0005",
+			"FirstPartial": 9.0,
+			"SecondPartial": 9.0,
+			"ThirdPartial": 9.0,
+			"FinalAverage": 9.0
+		}
+	],
+	"Subjects": [{
+			"ID_Subjects": "0001",
+			"Name": "Patrones de Diseño y Arquitecturas de Software"
+		},
+		{
+			"ID_Subjects": "0002",
+			"Name": "Microcontroladores II"
+		}, {
+			"ID_Subjects": "0003",
+			"Name": "Patrones de Diseño y Arquitecturas de Software"
+		},
+		{
+			"ID_Subjects": "0004",
+			"Name": "Machine Learning"
+		},
+		{
+			"ID_Subjects": "0005",
+			"Name": "Programación Orientada a Objetos"
+		}
+	]
+}
