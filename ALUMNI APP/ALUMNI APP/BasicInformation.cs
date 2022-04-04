@@ -24,6 +24,12 @@ namespace ALUMNI_APP
 
         }
 
+        /// <summary>
+        /// Updating viewtable with list information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void BasicInformation_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();

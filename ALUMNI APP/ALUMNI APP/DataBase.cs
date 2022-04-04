@@ -26,6 +26,8 @@ namespace ALUMNI_APP
             return _instance;
         }
 
+        
+
         private DataBase()
         {
             var appSettings = ConfigurationManager.AppSettings;
@@ -40,6 +42,10 @@ namespace ALUMNI_APP
                 readYAML();
             }
         }
+
+        /// <summary>
+        /// Converting input data with yaml format to Json using Adapter
+        /// </summary>
 
         private void readYAML(){
             Yaml yaml = new Yaml();

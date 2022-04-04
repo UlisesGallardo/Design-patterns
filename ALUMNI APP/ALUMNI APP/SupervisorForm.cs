@@ -67,6 +67,11 @@ namespace ALUMNI_APP
             userControl.BringToFront();
         }
 
+        /// <summary>
+        /// Creating a Supervisor user with factory 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SupervisorForm_Load(object sender, EventArgs e)
         {
             UserCreator creator = null;

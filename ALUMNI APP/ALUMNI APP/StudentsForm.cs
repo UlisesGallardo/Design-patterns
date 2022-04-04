@@ -14,7 +14,7 @@ using System.IO;
 
 namespace ALUMNI_APP
 {
-    public partial class ProfessorForm : Form
+    public partial class StudentsForm : Form
     {
         public string ID { get; set; }
         User user = null;
@@ -23,29 +23,37 @@ namespace ALUMNI_APP
         private List<JToken> searchResultsGrades;
         private DataTable tb_grades { get; set; }
 
-        public ProfessorForm()
+        public StudentsForm()
         {
             InitializeComponent();
         }
 
-        private void Title_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Creating a student user with factory 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
+        private void StudentsForm_Load(object sender, EventArgs e)
         {
-            Grades grades = new Grades();
-            grades.dt = tb_grades;
-            grades.user = "Professor";
-            AddUserControl(grades);
+            UserCreator creator = null;
+            creator = new StudentCreator();
+            user = creator.CreateUser(ID);
+            info = user.GetInformation();
+            searchResultsGrades = user.GetCalifications();
+            tb_grades = user.GradesToTable();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Buttons_Click(object sender, EventArgs e)
         {
             List<string> list = new List<string>();
             list.Add("Name");
-            list.Add("Degree");
+            list.Add("Carrer");
             list.Add("YearOfBirth");
             list.Add("City");
             BasicInformation bi = new BasicInformation();
@@ -62,25 +70,12 @@ namespace ALUMNI_APP
             userControl.BringToFront();
         }
 
-        private void ProfessorForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        /// <summary>
-        /// Creating a professor user with factory 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
-        private void ProfessorForm_Load(object sender, EventArgs e)
-        {
-            UserCreator creator = null;
-            creator = new ProfessorCreator();
-            user = creator.CreateUser(ID);
-            info = user.GetInformation();
-            searchResultsGrades = user.GetCalifications();
-            tb_grades = user.GradesToTable();
+            Grades grades = new Grades();
+            grades.dt = tb_grades;
+            grades.user = "Student";
+            AddUserControl(grades);
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -94,24 +89,9 @@ namespace ALUMNI_APP
             this.Dispose();
         }
 
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        private void StudentsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

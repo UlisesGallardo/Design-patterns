@@ -88,6 +88,12 @@ namespace ALUMNI_APP
             return false;
         }
 
+        /// <summary>
+        /// Validating user's credentials
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             password = PasswordUser.Text;
@@ -95,7 +101,7 @@ namespace ALUMNI_APP
 
             if (isStudent())
             {
-                StudentForm userStudent = new StudentForm();
+                StudentsForm userStudent = new StudentsForm();
                 this.Hide();
                 userStudent.ID = ID;
                 userStudent.Show();

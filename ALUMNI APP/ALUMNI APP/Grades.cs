@@ -36,6 +36,12 @@ namespace ALUMNI_APP
             }
         }
 
+        /// <summary>
+        /// Defining the grade export format 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
@@ -148,25 +154,19 @@ namespace ALUMNI_APP
         private void saveTxt(string filename)
         {
             int columnCount = GradeGrid.Columns.Count; //convertir tb_grades to string
-            string columnNames = "";
             string[] output = new string[GradeGrid.Rows.Count + 1];
-            for (int i = 0; i < columnCount; i++)
-            {
-                columnNames += GradeGrid.Columns[i].HeaderText.ToString() + "\t\t\t\t";
-            }
-            output[0] += columnNames;
 
             for (int i = 0; i < GradeGrid.Rows.Count; i++)
             {
-                output[i] += "\n";
                 for (int j = 0; j < columnCount; j++)
                 {
                     if (GradeGrid.Rows[i].Cells[j].Value != null)
                     {
-                        output[i] += GradeGrid.Rows[i].Cells[j].Value.ToString() + "\t\t\t\t";
+                        string type = GradeGrid.Columns[j].HeaderText.ToString();
+                        output[i] += type+": "+GradeGrid.Rows[i].Cells[j].Value.ToString() + "\n";
                     }
                 }
-
+                output[i] += "\n";
             }
             File.WriteAllLines(filename, output, Encoding.UTF8);
         }
