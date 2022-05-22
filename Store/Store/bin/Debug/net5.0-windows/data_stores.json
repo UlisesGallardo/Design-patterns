@@ -1,0 +1,22 @@
+{
+	"tienda": [{
+		"ID_Tienda": "1",
+		"NombreTienda": "Tienda01",
+		"Productos": [{
+				"ID_Producto": "01",
+				"NombreProducto": "Refrescos",
+				"Cantidad": "12"
+			},
+			{
+				"ID_Producto": "02",
+				"NombreProducto": "Pan",
+				"Cantidad": "400"
+			},
+			{
+				"ID_Producto": "03",
+				"NombreProducto": "Verduras",
+				"Cantidad": "100"
+			}
+		]
+	}]
+}
