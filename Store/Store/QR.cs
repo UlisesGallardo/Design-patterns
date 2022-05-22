@@ -14,7 +14,7 @@ using System.Drawing.Imaging;
 
 namespace Store
 {
-    class QR
+    public class QR : InformationDissemination
     {
         /// <summary>
         ///

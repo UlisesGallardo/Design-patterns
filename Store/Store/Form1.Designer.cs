@@ -38,9 +38,10 @@ namespace Store
             // Pedidos
             // 
             this.Pedidos.AutoSize = true;
+            this.Pedidos.Font = new System.Drawing.Font("Adobe Myungjo Std M", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Pedidos.Location = new System.Drawing.Point(361, 25);
             this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(49, 15);
+            this.Pedidos.Size = new System.Drawing.Size(87, 20);
             this.Pedidos.TabIndex = 0;
             this.Pedidos.Text = "Pedidos";
             this.Pedidos.Click += new System.EventHandler(this.label1_Click);

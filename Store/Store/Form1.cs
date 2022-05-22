@@ -72,11 +72,11 @@ namespace Store
 
             flowLayoutPanel1.Controls.Clear();
             Pedidos[] items = new Pedidos[NTiendas];
-            QR qr = new QR();
+            _2DCodeAdapter adapter_to_QR = new _2DCodeAdapter("QR");
 
             for (int i = 0; i < items.Length; i++)
             {
-                string str = qr.Read(allfiles[i]);
+                string str = adapter_to_QR.Read2dCode(allfiles[i]);
                 JObject json = JObject.Parse(str);
                 Tienda album = json.ToObject<Tienda>();
 
@@ -86,7 +86,7 @@ namespace Store
 
                 for (int j=0; j<album.Productos.Count; j++)
                 {
-                    string valores = album.Productos[j].NombreProducto + " - " + album.Productos[j].Cantidad;
+                    string valores = (j+1).ToString( ) +".- " + album.Productos[j].NombreProducto + " - " + album.Productos[j].Cantidad;
                     lista.Add(valores);
                 }
                 items[i].Productos = lista;

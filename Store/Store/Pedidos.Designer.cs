@@ -49,18 +49,21 @@ namespace Store
             // 
             // ListaProductos
             // 
+            this.ListaProductos.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ListaProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListaProductos.Font = new System.Drawing.Font("Adobe Devanagari", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListaProductos.FormattingEnabled = true;
-            this.ListaProductos.ItemHeight = 15;
-            this.ListaProductos.Location = new System.Drawing.Point(45, 54);
+            this.ListaProductos.ItemHeight = 20;
+            this.ListaProductos.Location = new System.Drawing.Point(45, 64);
             this.ListaProductos.Name = "ListaProductos";
-            this.ListaProductos.Size = new System.Drawing.Size(245, 169);
+            this.ListaProductos.Size = new System.Drawing.Size(245, 140);
             this.ListaProductos.TabIndex = 1;
             this.ListaProductos.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 12);
+            this.label1.Location = new System.Drawing.Point(32, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 15);
             this.label1.TabIndex = 2;
@@ -70,9 +73,10 @@ namespace Store
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 35);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(32, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 15);
+            this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Productos:";
             // 
