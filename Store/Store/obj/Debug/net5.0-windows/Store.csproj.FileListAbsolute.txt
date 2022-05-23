@@ -31,3 +31,6 @@ C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Stef.V
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Spire.Barcode.dll
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Spire.License.dll
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.Pedidos.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.ResumenPedidos.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.AgregarPedido.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.SurtirPedido.resources
