@@ -4,8 +4,14 @@
     <Compile Update="AgregarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="CrearPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NuevoPedido.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Pedidos.cs">
       <SubType>UserControl</SubType>

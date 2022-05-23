@@ -63,6 +63,9 @@ namespace Store
 
         private void AgregarPedido_Load(object sender, EventArgs e)
         {
+
+
+
             _lista_productos = new List<Producto>();
             dt = new DataTable();
             dt.Columns.Add(new DataColumn("ID", typeof(int)));

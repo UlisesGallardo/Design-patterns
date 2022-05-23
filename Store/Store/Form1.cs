@@ -17,7 +17,8 @@ namespace Store
     public partial class Form1 : Form
     {
         public System.Data.DataTable _dt { get; set; }
-
+        public List<Tienda> tiendas;
+        public List<Bitmap> _imagenes;
         public Form1()
         {
             InitializeComponent();
@@ -78,12 +79,15 @@ namespace Store
 
             Dictionary<string, int> resumen_total = new Dictionary<string, int>();
             Dictionary<string, int> beneficio_tienda = new Dictionary<string, int>();
+            tiendas = new List<Tienda>();
+            _imagenes = new List<Bitmap>();
 
             for (int i = 0; i < items.Length; i++)
             {
                 string str = adapter_to_QR.Read2dCode(allfiles[i]);
                 JObject json = JObject.Parse(str);
                 Tienda album = json.ToObject<Tienda>();
+                tiendas.Add(album);
 
                 items[i] = new Pedidos();
                 items[i].NombreTienda = album.NombreTienda;
@@ -104,7 +108,15 @@ namespace Store
                 if(beneficio_tienda.ContainsKey(album.NombreTienda) == false) beneficio_tienda.Add(album.NombreTienda, CantidadTotal);
 
                 items[i].Productos = lista;
-                items[i].Imagen = new Bitmap(allfiles[i]);
+
+                Image imagen;
+                using (var bmpTemp = new Bitmap(allfiles[i]))
+                {
+                    imagen = new Bitmap(bmpTemp);
+                }
+
+                _imagenes.Add(imagen as Bitmap);
+                items[i].Imagen = imagen as Bitmap;
                 flowLayoutPanel1.Controls.Add(items[i]);
             }
             _dt = DataTableResumen(resumen_total);
@@ -154,17 +166,22 @@ namespace Store
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ResumenPedidos resumen_pedidos = new ResumenPedidos();
             this.Hide();
+            flowLayoutPanel1.Controls.Clear();
+
+            ResumenPedidos resumen_pedidos = new ResumenPedidos();
             resumen_pedidos.dt = _dt;
+            resumen_pedidos.Tiendas = tiendas;
+            resumen_pedidos.Imagenes = _imagenes;
             resumen_pedidos.Show();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarPedido agregar_pedidos = new AgregarPedido();
+            CrearPedido agregar_pedidos = new CrearPedido();
             this.Hide();
-            agregar_pedidos.previus = "general";
+            agregar_pedidos.previous = "general";
             agregar_pedidos.Show();
         }
     }

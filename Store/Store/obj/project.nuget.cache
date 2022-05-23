@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xuzrWTZ2HIcPFfwHNb9EhnhHdj4Ydr5mk57Wjbc3wAz2w6D4HsJhOiOpNCXJrmiGYfUW8R8i1WXQrGfoLq4eiw==",
+  "dgSpecHash": "VWl9iwj3aTaob0N16b8o3LgchLu0hkAR4uyo73PSGB+zgUjNFjHdRWdhHVb2sWIF6ooxRs0Cm74lFTQzMRA1UQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vladimir\\Music\\Proyectos C#\\Store\\Store\\Store.csproj",
+  "projectFilePath": "C:\\Users\\Vladimir\\Music\\Design Patterns Github\\Patterns-Design-\\Store\\Store\\Store.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vladimir\\.nuget\\packages\\freespire.barcode\\6.1.0\\freespire.barcode.6.1.0.nupkg.sha512",
     "C:\\Users\\Vladimir\\.nuget\\packages\\messagingtoolkit.qrcode\\1.3.0\\messagingtoolkit.qrcode.1.3.0.nupkg.sha512",

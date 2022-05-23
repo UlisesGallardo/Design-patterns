@@ -13,6 +13,29 @@ namespace Store
     public partial class ResumenPedidos : Form
     {
         public System.Data.DataTable dt { get; set; }
+        List<Tienda> _tiendas;
+        List<Bitmap> _imagenes;
+
+
+        public List<Tienda> Tiendas
+        {
+            set
+            {
+                _tiendas = new List<Tienda>();
+                _tiendas = value;
+            }
+        }
+
+        public List<Bitmap> Imagenes
+        {
+            set
+            {
+                _imagenes = new List<Bitmap>();
+                _imagenes = value;
+            }
+        }
+
+
         public ResumenPedidos()
         {
             InitializeComponent();
@@ -61,7 +84,11 @@ namespace Store
                 DialogResult dialogResult = MessageBox.Show("La simulación ha tenido éxito.\nCantidad de producto sobrante: "+sobrante.ToString()+ " productos.\n¿Desea continuar con el surtido de productos?", "Simulación Exitosa.", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
-
+                    SurtirPedido pedido = new SurtirPedido();
+                    pedido.Tiendas = _tiendas;
+                    pedido.Imagenes = _imagenes;
+                    this.Close();
+                    pedido.Show();
                 }
             }
             else

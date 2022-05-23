@@ -11,6 +11,7 @@ using QRCoder;
 using System.Text.Json;
 using MessagingToolkit.QRCode.Codec.Data;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace Store
 {
@@ -43,6 +44,7 @@ namespace Store
             {
                 img = new Bitmap(bmpTemp);
             }
+
             var decoder = new MessagingToolkit.QRCode.Codec.QRCodeDecoder();
             string data = decoder.Decode(new QRCodeBitmapImage(img as Bitmap));
             return data;
@@ -53,7 +55,13 @@ namespace Store
             if (qr != null)
             {
                 Image img = qr;
+                bool result = File.Exists(path);
+                if (result == true)
+                {
+                    File.Delete(path); 
+                }
                 img.Save(path, ImageFormat.Png);
+                img.Dispose();
             }
         }
     }
