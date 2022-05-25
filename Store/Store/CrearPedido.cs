@@ -36,5 +36,12 @@ namespace Store
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 anterior = new Form1();
+            this.Close();
+            anterior.Show();
+        }
     }
 }

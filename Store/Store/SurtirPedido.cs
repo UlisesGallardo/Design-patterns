@@ -17,6 +17,21 @@ namespace Store
         List<Tienda> _tiendas;
         List<Bitmap> _imagenes;
 
+        private int ComprarTiendas(Tienda x, Tienda y)
+        {
+            int sum1 = 0, sum2 =0;
+            foreach(Producto p in x.Productos)
+            {
+                sum1 += Int32.Parse(p.Cantidad);
+            }
+            foreach (Producto p in y.Productos)
+            {
+                sum2 += Int32.Parse(p.Cantidad);
+            }
+            if (sum1 == sum2) return 0;
+            if (sum1 > sum2) return -1;
+            return 1;
+        }
 
         public int index;
         public List<Tienda> Tiendas
@@ -62,24 +77,25 @@ namespace Store
                 _imagenes.Add(img as Bitmap);
                 _tiendas.Add(album);
             }
-            
-            Update();
+
+            UpdateData();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            index--;
-            Update();
+            if(index-1>=0)index--;
+            UpdateData();
         }
 
         private void SurtirPedido_Load(object sender, EventArgs e)
         {
-           
+            _tiendas.Sort(ComprarTiendas);
             index = 0;
-            Update();
+            if(_tiendas.Count ==1) button1.Text = "Finalizar";
+            UpdateData();
         }
 
-        public void Update()
+        public void UpdateData()
         {
             flowLayoutPanel1.Controls.Clear();
             NuevoPedido _nuevo = new NuevoPedido();
@@ -92,8 +108,17 @@ namespace Store
 
         private void button1_Click(object sender, EventArgs e)
         {
-            index++;
-            Update();
+            if (index == _tiendas.Count -1) finalizar();
+            if (index+1<_tiendas.Count)index++;
+            if (index == _tiendas.Count - 1) button1.Text = "Finalizar"; 
+            UpdateData();
+        }
+
+        public void finalizar()
+        {
+            Form1 pedido = new Form1();
+            this.Close();
+            pedido.Show();
         }
     }
 }

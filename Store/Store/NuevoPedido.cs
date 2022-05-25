@@ -89,6 +89,27 @@ namespace Store
             t.Productos = listaProducto;
 
             string[] allfiles = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Pedidos", "*.*", SearchOption.AllDirectories);
+
+            bool flag = false;
+
+            for (int i=0; i<allfiles.Length; i++)
+            {
+                string []words = allfiles[i].Split("\\");
+                string name = words[words.Length-1]; 
+                if(name == t.NombreTienda)
+                {
+                    flag = true;
+                    break;
+                }
+            }
+
+            if (flag)
+            {
+                    DialogResult dialogResult = MessageBox.Show("En el directorio actual, el nombre de la tienda está repetido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;  
+            }
+
+
             string NTiendas = "0"+(allfiles.Length + 1).ToString();
             t.ID_Tienda = NTiendas;
 

@@ -13,6 +13,8 @@ namespace Store
     public partial class ResumenPedidos : Form
     {
         public System.Data.DataTable dt { get; set; }
+        public System.Data.DataTable _dtCamiones { get; set; }
+
         List<Tienda> _tiendas;
         List<Bitmap> _imagenes;
 
@@ -35,6 +37,15 @@ namespace Store
             }
         }
 
+        public DataTable Camiones
+        {
+            set
+            {
+                _dtCamiones = new DataTable();
+                _dtCamiones = value;
+            }
+        }
+
 
         public ResumenPedidos()
         {
@@ -44,6 +55,7 @@ namespace Store
         private void ResumenPedidos_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = dt;
+            dataGridView2.DataSource = _dtCamiones;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,22 +72,24 @@ namespace Store
         {
             bool PassSimulation = true;
             int sobrante = 0;
+            
+            DataTable table = (dataGridView1.DataSource as DataTable).Copy();
+            DataTable table2 = (dataGridView2.DataSource as DataTable).Copy();
 
-            DataTable table = dataGridView1.DataSource as DataTable;
-            foreach (DataRow row in table.Rows)
+            int index = 0;
+            foreach (DataRow row in table2.Rows)
             {
-
-                string name = row["Producto"].ToString();
-                int cantidad = Int32.Parse(row["Cantidad"].ToString());
+                int cantidad = Int32.Parse(table.Rows[index]["Cantidad"].ToString());
                 int capacidad = Int32.Parse(row["Capacidad"].ToString());
                 int cantidadCamiones = Int32.Parse(row["CantidadCamiones"].ToString());
 
-                if (cantidadCamiones * capacidad < capacidad)
+                if (cantidadCamiones * capacidad < cantidad)
                 {
                     PassSimulation = false;
                     break;
                 }
                 sobrante += (cantidadCamiones * capacidad - cantidad);
+                index++;
             }
 
 
@@ -99,7 +113,14 @@ namespace Store
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+            
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 anterior = new Form1();
+            this.Close();
+            anterior.Show();
         }
     }
 }

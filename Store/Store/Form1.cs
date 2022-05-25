@@ -17,8 +17,11 @@ namespace Store
     public partial class Form1 : Form
     {
         public System.Data.DataTable _dt { get; set; }
+        public System.Data.DataTable _dtCamiones {get;set;}
         public List<Tienda> tiendas;
         public List<Bitmap> _imagenes;
+        public Dictionary<Tienda, int> beneficio_tienda;
+
         public Form1()
         {
             InitializeComponent();
@@ -78,10 +81,9 @@ namespace Store
             _2DCodeAdapter adapter_to_QR = new _2DCodeAdapter("QR");
 
             Dictionary<string, int> resumen_total = new Dictionary<string, int>();
-            Dictionary<string, int> beneficio_tienda = new Dictionary<string, int>();
             tiendas = new List<Tienda>();
             _imagenes = new List<Bitmap>();
-
+            beneficio_tienda = new Dictionary<Tienda, int>();
             for (int i = 0; i < items.Length; i++)
             {
                 string str = adapter_to_QR.Read2dCode(allfiles[i]);
@@ -105,7 +107,7 @@ namespace Store
 
                     lista.Add(valores);
                 }
-                if(beneficio_tienda.ContainsKey(album.NombreTienda) == false) beneficio_tienda.Add(album.NombreTienda, CantidadTotal);
+                if(beneficio_tienda.ContainsKey(album) == false) beneficio_tienda.Add(album, CantidadTotal);
 
                 items[i].Productos = lista;
 
@@ -120,6 +122,8 @@ namespace Store
                 flowLayoutPanel1.Controls.Add(items[i]);
             }
             _dt = DataTableResumen(resumen_total);
+            _dtCamiones = DataTableCamiones(resumen_total);
+
         }
 
 
@@ -128,10 +132,6 @@ namespace Store
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("Producto", typeof(string)));
             dt.Columns.Add(new DataColumn("Cantidad", typeof(int)));
-            dt.Columns.Add(new DataColumn("Capacidad", typeof(int)));
-            dt.Columns.Add(new DataColumn("CantidadCamiones", typeof(int)));
-            dt.Columns.Add(new DataColumn("Mínimos Necesarios", typeof(int)));
-
             DataRow dr = null;
 
             foreach (KeyValuePair<string, int> kvp in resumen_total)
@@ -139,15 +139,31 @@ namespace Store
                 dr = dt.NewRow();
                 dr["Producto"] = kvp.Key;
                 dr["Cantidad"] = kvp.Value;
-                dr["Capacidad"] = 120;
-                dr["CantidadCamiones"] = 5;
-                double d  = Convert.ToDouble(kvp.Value) / Convert.ToDouble(120);
-                dr["Mínimos Necesarios"] = (int)Math.Ceiling(d);
                 dt.Rows.Add(dr);
             }
             return dt;
         }
 
+        public DataTable DataTableCamiones(Dictionary<string, int> resumen_total)
+        {
+            DataTable dt2 = new DataTable();
+            dt2.Columns.Add(new DataColumn("Capacidad", typeof(int)));
+            dt2.Columns.Add(new DataColumn("CantidadCamiones", typeof(int)));
+            dt2.Columns.Add(new DataColumn("Necesarios", typeof(int)));
+
+            DataRow dr = null;
+
+            foreach (KeyValuePair<string, int> kvp in resumen_total)
+            {
+                dr = dt2.NewRow();
+                dr["Capacidad"] = 120;
+                dr["CantidadCamiones"] = 5;
+                double d = Convert.ToDouble(kvp.Value) / Convert.ToDouble(120);
+                dr["Necesarios"] = (int)Math.Ceiling(d);
+                dt2.Rows.Add(dr);
+            }
+            return dt2;
+        }
 
         public class RootObject
         {
@@ -171,6 +187,7 @@ namespace Store
 
             ResumenPedidos resumen_pedidos = new ResumenPedidos();
             resumen_pedidos.dt = _dt;
+            resumen_pedidos.Camiones = _dtCamiones;
             resumen_pedidos.Tiendas = tiendas;
             resumen_pedidos.Imagenes = _imagenes;
             resumen_pedidos.Show();

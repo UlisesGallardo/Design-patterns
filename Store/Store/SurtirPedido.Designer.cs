@@ -39,9 +39,9 @@ namespace Store
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(321, 58);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(373, 58);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1033, 558);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(965, 491);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // NombreTienda
@@ -56,7 +56,7 @@ namespace Store
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1233, 646);
+            this.button1.Location = new System.Drawing.Point(1226, 589);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace Store
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(289, 631);
+            this.button2.Location = new System.Drawing.Point(282, 574);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace Store
             // 
             // ImagenInfo
             // 
-            this.ImagenInfo.Location = new System.Drawing.Point(2, 180);
+            this.ImagenInfo.Location = new System.Drawing.Point(36, 167);
             this.ImagenInfo.Name = "ImagenInfo";
             this.ImagenInfo.Size = new System.Drawing.Size(313, 304);
             this.ImagenInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -87,13 +87,14 @@ namespace Store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1366, 681);
+            this.ClientSize = new System.Drawing.Size(1366, 622);
             this.Controls.Add(this.ImagenInfo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NombreTienda);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "SurtirPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SurtirPedido";
             this.Load += new System.EventHandler(this.SurtirPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImagenInfo)).EndInit();

@@ -46,7 +46,7 @@ namespace Store
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(879, 432);
+            this.Guardar.Location = new System.Drawing.Point(852, 432);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 19;
@@ -61,7 +61,7 @@ namespace Store
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.NombreProducto);
             this.groupBox1.Controls.Add(this.AgregarProducto);
-            this.groupBox1.Location = new System.Drawing.Point(42, 92);
+            this.groupBox1.Location = new System.Drawing.Point(15, 92);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(401, 210);
             this.groupBox1.TabIndex = 18;
@@ -129,7 +129,7 @@ namespace Store
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(470, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(443, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(507, 376);
@@ -138,7 +138,7 @@ namespace Store
             // 
             // nombreTienda01
             // 
-            this.nombreTienda01.Location = new System.Drawing.Point(201, 24);
+            this.nombreTienda01.Location = new System.Drawing.Point(174, 24);
             this.nombreTienda01.Name = "nombreTienda01";
             this.nombreTienda01.Size = new System.Drawing.Size(221, 23);
             this.nombreTienda01.TabIndex = 16;
@@ -147,7 +147,7 @@ namespace Store
             // 
             this.NombreTienda.AutoSize = true;
             this.NombreTienda.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NombreTienda.Location = new System.Drawing.Point(30, 16);
+            this.NombreTienda.Location = new System.Drawing.Point(3, 16);
             this.NombreTienda.Name = "NombreTienda";
             this.NombreTienda.Size = new System.Drawing.Size(143, 28);
             this.NombreTienda.TabIndex = 15;
@@ -163,7 +163,7 @@ namespace Store
             this.Controls.Add(this.nombreTienda01);
             this.Controls.Add(this.NombreTienda);
             this.Name = "NuevoPedido";
-            this.Size = new System.Drawing.Size(986, 464);
+            this.Size = new System.Drawing.Size(956, 467);
             this.Load += new System.EventHandler(this.NuevoPedido_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

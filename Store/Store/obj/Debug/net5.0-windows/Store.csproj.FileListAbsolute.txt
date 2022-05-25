@@ -72,3 +72,5 @@ C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\obj\
 C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\obj\Debug\net5.0-windows\ref\Store.dll
 C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\obj\Debug\net5.0-windows\Store.pdb
 C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\obj\Debug\net5.0-windows\Store.genruntimeconfig.cache
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.CrearPedido.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.NuevoPedido.resources

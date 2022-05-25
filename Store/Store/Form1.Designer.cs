@@ -38,12 +38,12 @@ namespace Store
             // Pedidos
             // 
             this.Pedidos.AutoSize = true;
-            this.Pedidos.Font = new System.Drawing.Font("Adobe Myungjo Std M", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Pedidos.Location = new System.Drawing.Point(336, 9);
+            this.Pedidos.Font = new System.Drawing.Font("Adobe Myungjo Std M", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Pedidos.Location = new System.Drawing.Point(280, 9);
             this.Pedidos.Name = "Pedidos";
-            this.Pedidos.Size = new System.Drawing.Size(87, 20);
+            this.Pedidos.Size = new System.Drawing.Size(248, 28);
             this.Pedidos.TabIndex = 0;
-            this.Pedidos.Text = "Pedidos";
+            this.Pedidos.Text = "Pedidos Actuales";
             this.Pedidos.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel1
@@ -52,7 +52,7 @@ namespace Store
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 61);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 313);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 340);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
