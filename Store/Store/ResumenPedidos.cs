@@ -56,6 +56,17 @@ namespace Store
         {
             dataGridView1.DataSource = dt;
             dataGridView2.DataSource = _dtCamiones;
+
+            foreach (Form forms in Application.OpenForms)
+            {
+                string name = forms.Name;
+                if(name == "WriteLogs")
+                {
+                    WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                    form.logs.execute("Comienzo de simulación ");
+                    break;
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +86,17 @@ namespace Store
             
             DataTable table = (dataGridView1.DataSource as DataTable).Copy();
             DataTable table2 = (dataGridView2.DataSource as DataTable).Copy();
+
+            foreach (Form forms in Application.OpenForms)
+            {
+                string name = forms.Name;
+                if (name == "WriteLogs")
+                {
+                    WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                    form.logs.execute("Camiones Agregados ");
+                    break;
+                }
+            }
 
             int index = 0;
             foreach (DataRow row in table2.Rows)
@@ -98,6 +120,17 @@ namespace Store
                 DialogResult dialogResult = MessageBox.Show("La simulación ha tenido éxito.\nCantidad de producto sobrante: "+sobrante.ToString()+ " productos.\n¿Desea continuar con el surtido de productos?", "Simulación Exitosa.", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
+                    foreach (Form forms in Application.OpenForms)
+                    {
+                        string name = forms.Name;
+                        if (name == "WriteLogs")
+                        {
+                            WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                            form.logs.execute("Fin de simulación ");
+                            break;
+                        }
+                    }
+
                     SurtirPedido pedido = new SurtirPedido();
                     pedido.Tiendas = _tiendas;
                     pedido.Imagenes = _imagenes;

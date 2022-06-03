@@ -33,7 +33,7 @@ namespace Store
         }
 
         public void LoadInformation()
-        {  
+        {
                 /*
                 Tienda t = new Tienda();
                 t.NombreTienda = "Tienda05";
@@ -200,6 +200,12 @@ namespace Store
             this.Hide();
             agregar_pedidos.previous = "general";
             agregar_pedidos.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            WriteLogs logs = new WriteLogs();
+            logs.Show();
         }
     }
 }

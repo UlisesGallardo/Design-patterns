@@ -35,6 +35,7 @@ namespace Store
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@ namespace Store
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(536, 9);
+            this.label1.Location = new System.Drawing.Point(564, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 30);
             this.label1.TabIndex = 1;
@@ -54,7 +55,7 @@ namespace Store
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(168, 9);
+            this.label2.Location = new System.Drawing.Point(118, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 30);
             this.label2.TabIndex = 2;
@@ -66,7 +67,7 @@ namespace Store
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Empezar Simulación";
+            this.button1.Text = "Validar Ruta";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -79,10 +80,10 @@ namespace Store
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(67, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(276, 301);
+            this.dataGridView1.Size = new System.Drawing.Size(361, 301);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -105,17 +106,28 @@ namespace Store
             this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView2.Location = new System.Drawing.Point(391, 62);
+            this.dataGridView2.Location = new System.Drawing.Point(391, 90);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.Size = new System.Drawing.Size(397, 301);
             this.dataGridView2.TabIndex = 7;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(236, 2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(314, 39);
+            this.guna2HtmlLabel1.TabIndex = 8;
+            this.guna2HtmlLabel1.Text = "Nueva Simulación de Ruta";
             // 
             // ResumenPedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -140,5 +152,6 @@ namespace Store
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

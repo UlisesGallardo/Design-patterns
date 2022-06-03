@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using QRCoder;
 
 using System.Text.Json;
 using MessagingToolkit.QRCode.Codec.Data;

@@ -41,6 +41,17 @@ namespace Store
                 return;
             }
 
+            foreach (Form forms in Application.OpenForms)
+            {
+                string name = forms.Name;
+                if (name == "WriteLogs")
+                {
+                    WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                    form.logs.execute("Agregando Producto ");
+                    break;
+                }
+            }
+
             Producto p = new Producto();
 
             p.ID_Producto = (dt.Rows.Count + 1).ToString();
@@ -127,12 +138,33 @@ namespace Store
   
             if (previous == "general")
             {
+                foreach (Form forms in Application.OpenForms)
+                {
+                    string name = forms.Name;
+                    if (name == "WriteLogs")
+                    {
+                        WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                        form.logs.execute("Finalizar pedido ");
+                        break;
+                    }
+                }
+
                 this.ParentForm.Hide();
                 Form1 frm = new Form1();
                 frm.Show();
             }
             else if(previous == "surtir")
             {
+                foreach (Form forms in Application.OpenForms)
+                {
+                    string name = forms.Name;
+                    if (name == "WriteLogs")
+                    {
+                        WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                        form.logs.execute("Pedido Actualizado ");
+                        break;
+                    }
+                }
                 SurtirPedido a =  (SurtirPedido)this.ParentForm;
                 a.UpdateImages();   
             }
@@ -140,7 +172,34 @@ namespace Store
 
         private void NuevoPedido_Load(object sender, EventArgs e)
         {
-            dt = new DataTable();
+            if (previous == "general")
+            {
+                foreach (Form forms in Application.OpenForms)
+                {
+                    string name = forms.Name;
+                    if (name == "WriteLogs")
+                    {
+                        WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                        form.logs.execute("Crear nuevo pedido ");
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                foreach (Form forms in Application.OpenForms)
+                {
+                    string name = forms.Name;
+                    if (name == "WriteLogs")
+                    {
+                        WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                        form.logs.execute("Actualizando Pedido ");
+                        break;
+                    }
+                }
+            }
+
+                dt = new DataTable();
             dt.Columns.Add(new DataColumn("ID", typeof(int)));
             dt.Columns.Add(new DataColumn("Producto", typeof(string)));
             dt.Columns.Add(new DataColumn("Cantidad", typeof(int)));

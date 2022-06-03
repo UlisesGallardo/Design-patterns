@@ -84,6 +84,7 @@ namespace Store
         private void button2_Click(object sender, EventArgs e)
         {
             if(index-1>=0)index--;
+            button1.Text = "Siguiente";
             UpdateData();
         }
 
@@ -116,6 +117,17 @@ namespace Store
 
         public void finalizar()
         {
+            foreach (Form forms in Application.OpenForms)
+            {
+                string name = forms.Name;
+                if (name == "WriteLogs")
+                {
+                    WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                    form.logs.execute("Pedidos Surtidos ");
+                    break;
+                }
+            }
+
             Form1 pedido = new Form1();
             this.Close();
             pedido.Show();

@@ -56,7 +56,7 @@ namespace Store
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1226, 589);
+            this.button1.Location = new System.Drawing.Point(787, 587);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace Store
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(282, 574);
+            this.button2.Location = new System.Drawing.Point(643, 587);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace Store
             // 
             // ImagenInfo
             // 
-            this.ImagenInfo.Location = new System.Drawing.Point(36, 167);
+            this.ImagenInfo.Location = new System.Drawing.Point(24, 58);
             this.ImagenInfo.Name = "ImagenInfo";
             this.ImagenInfo.Size = new System.Drawing.Size(313, 304);
             this.ImagenInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

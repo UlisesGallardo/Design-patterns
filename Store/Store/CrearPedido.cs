@@ -39,6 +39,17 @@ namespace Store
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach (Form forms in Application.OpenForms)
+            {
+                string name = forms.Name;
+                if (name == "WriteLogs")
+                {
+                    WriteLogs form = (WriteLogs)Application.OpenForms["WriteLogs"];
+                    form.logs.execute("Nuevo Pedido Cancelado");
+                    break;
+                }
+            }
+
             Form1 anterior = new Form1();
             this.Close();
             anterior.Show();

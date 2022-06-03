@@ -18,21 +18,9 @@ C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\ref\Store.dll
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.pdb
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.genruntimeconfig.cache
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\QRCoder.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\System.Drawing.Common.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\MessagingToolkit.QRCode.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\QRCodeDecoderLibrary.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\QRCodeSharedLibrary.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Stef.Validation.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Spire.Barcode.dll
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Spire.License.dll
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.Pedidos.resources
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.ResumenPedidos.resources
-C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.AgregarPedido.resources
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.SurtirPedido.resources
 C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\bin\Debug\net5.0-windows\Store.exe
 C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\bin\Debug\net5.0-windows\Store.deps.json
@@ -74,3 +62,8 @@ C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\obj\
 C:\Users\Vladimir\Music\Design Patterns Github\Patterns-Design-\Store\Store\obj\Debug\net5.0-windows\Store.genruntimeconfig.cache
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.CrearPedido.resources
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.NuevoPedido.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\bin\Debug\net5.0-windows\Guna.UI2.dll
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.WriteLogs.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.TxtFileForm.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.TextBox.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.DataGrid.resources
