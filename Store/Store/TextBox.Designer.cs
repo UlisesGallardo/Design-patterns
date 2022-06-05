@@ -37,7 +37,7 @@ namespace Store
             this.textBox1.Location = new System.Drawing.Point(17, 11);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(398, 209);
+            this.textBox1.Size = new System.Drawing.Size(487, 400);
             this.textBox1.TabIndex = 0;
             // 
             // TextBox
@@ -46,7 +46,7 @@ namespace Store
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Name = "TextBox";
-            this.Size = new System.Drawing.Size(430, 232);
+            this.Size = new System.Drawing.Size(519, 426);
             this.Load += new System.EventHandler(this.TextBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

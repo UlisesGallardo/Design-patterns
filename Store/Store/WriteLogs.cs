@@ -12,13 +12,24 @@ namespace Store
 {
     public partial class WriteLogs : Form
     {
+        private static WriteLogs _instance = null;
         public Log logs;
         private TxtFileForm _txt_form;
         private TextBox _txt_box;
         private DataGrid _data_grid;
-        public WriteLogs()
+
+        protected WriteLogs()
         {
             InitializeComponent();
+        }
+
+        public static WriteLogs GetInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new WriteLogs();
+            }
+            return _instance;
         }
 
         private void WriteLogs_Load(object sender, EventArgs e)

@@ -9,7 +9,7 @@ namespace Store
 {
     public interface InformationDissemination
     {
-        public Bitmap Create(Tienda tienda);
+        public Bitmap Create(string data);
 
         public string Read(string path);
 

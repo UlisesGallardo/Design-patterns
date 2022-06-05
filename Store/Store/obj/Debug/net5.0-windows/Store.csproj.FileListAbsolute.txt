@@ -67,3 +67,4 @@ C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.TxtFileForm.resources
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.TextBox.resources
 C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.DataGrid.resources
+C:\Users\Vladimir\Music\Proyectos C#\Store\Store\obj\Debug\net5.0-windows\Store.Properties.Resources.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Store
 {
-    public class _2DCodeAdapter : _2DCodes
+    public class _2DCodeAdapter : StoreTo2Dcode
     {
         InformationDissemination _i_d;
 
@@ -17,14 +18,19 @@ namespace Store
             else _i_d  = null;
         }
 
-        public Bitmap Create2dCode(Tienda tienda) {
+        public Bitmap Convert(Tienda tienda) {
+            string data = System.Text.Json.JsonSerializer.Serialize(tienda);
+
             if (_i_d == null) return null;
-            return _i_d.Create(tienda);
+            return  _i_d.Create(data); 
         }
-        public string Read2dCode(string path)
+        public Tienda TwoDImageCodeToStore(string path)
         {
+            string str = _i_d.Read(path);
+            JObject json = JObject.Parse(str);
+            Tienda t = json.ToObject<Tienda>();
             if (_i_d == null) return null;
-            return _i_d.Read(path);
+            return t;
         }
         public void Save2dCode(string path)
         {

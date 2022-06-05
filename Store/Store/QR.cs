@@ -23,9 +23,8 @@ namespace Store
         /// 
         private Bitmap qr = null;
 
-        public Bitmap Create(Tienda tienda)
+        public Bitmap Create(string  data)
         {
-            string data = System.Text.Json.JsonSerializer.Serialize(tienda); 
             var encoder = new MessagingToolkit.QRCode.Codec.QRCodeEncoder();
             encoder.QRCodeScale = 6;
             qr = encoder.Encode(data);

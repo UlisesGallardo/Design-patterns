@@ -1,6 +1,7 @@
-Comienzo de simulación  -> Fecha02/06/2022 07:29:13 p. m.
-Camiones Agregados  -> Fecha02/06/2022 07:29:15 p. m.
-Fin de simulación  -> Fecha02/06/2022 07:29:16 p. m.
-Crear Pedidos  -> Fecha02/06/2022 07:30:02 p. m.
-Crear Pedidos  -> Fecha02/06/2022 07:38:22 p. m.
-Comienzo de simulación  -> Fecha02/06/2022 08:58:35 p. m.
+Comienzo de simulación  -> Fecha05/06/2022 03:03:37 p. m.
+Camiones Agregados  -> Fecha05/06/2022 03:03:39 p. m.
+Fin de simulación  -> Fecha05/06/2022 03:03:40 p. m.
+Actualizando Pedido  -> Fecha05/06/2022 03:03:40 p. m.
+Actualizando Pedido  -> Fecha05/06/2022 03:03:42 p. m.
+Actualizando Pedido  -> Fecha05/06/2022 03:03:43 p. m.
+Pedidos Surtidos  -> Fecha05/06/2022 03:03:44 p. m.

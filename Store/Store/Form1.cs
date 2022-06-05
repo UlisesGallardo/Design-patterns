@@ -34,40 +34,6 @@ namespace Store
 
         public void LoadInformation()
         {
-                /*
-                Tienda t = new Tienda();
-                t.NombreTienda = "Tienda05";
-                t.ID_Tienda = "05";
-
-                List<Producto> l = new List<Producto>();
-                Producto p1 = new Producto();
-                p1.Cantidad = "5";
-                p1.ID_Producto = "01";
-                p1.NombreProducto = "Bebidas alcoholicas";
-                l.Add(p1);
-                Producto p2 = new Producto();
-                p2.Cantidad = "20";
-                p2.ID_Producto = "02";
-                p2.NombreProducto = "Lacteos";
-                t.Productos = l;
-                l.Add(p2);
-                Producto p3 = new Producto();
-                p3.Cantidad = "45";
-                p3.ID_Producto = "03";
-                p3.NombreProducto = "Higiene personal";
-                l.Add(p3);
-                Producto p4 = new Producto();
-                p4.Cantidad = "64";
-                p4.ID_Producto = "04";
-                p4.NombreProducto = "Congelados";
-                l.Add(p4);
-                t.Productos = l;*/
-                /*
-                QR qr = new QR();
-                qr.Create(t);
-                qr.Save(Directory.GetCurrentDirectory() + "\\img05.png");
-                string s = qr.Read(Directory.GetCurrentDirectory() + "\\img05.png");
-                Console.WriteLine(s);*/
                 GenerateDynamicUserControl(); 
         }
 
@@ -78,7 +44,7 @@ namespace Store
 
             flowLayoutPanel1.Controls.Clear();
             Pedidos[] items = new Pedidos[NTiendas];
-            _2DCodeAdapter adapter_to_QR = new _2DCodeAdapter("QR");
+            StoreTo2Dcode adapter_to_QR = new _2DCodeAdapter("QR");
 
             Dictionary<string, int> resumen_total = new Dictionary<string, int>();
             tiendas = new List<Tienda>();
@@ -86,9 +52,7 @@ namespace Store
             beneficio_tienda = new Dictionary<Tienda, int>();
             for (int i = 0; i < items.Length; i++)
             {
-                string str = adapter_to_QR.Read2dCode(allfiles[i]);
-                JObject json = JObject.Parse(str);
-                Tienda album = json.ToObject<Tienda>();
+                Tienda album = adapter_to_QR.TwoDImageCodeToStore(allfiles[i]);
                 tiendas.Add(album);
 
                 items[i] = new Pedidos();
@@ -156,9 +120,10 @@ namespace Store
             foreach (KeyValuePair<string, int> kvp in resumen_total)
             {
                 dr = dt2.NewRow();
-                dr["Capacidad"] = 120;
-                dr["CantidadCamiones"] = 5;
-                double d = Convert.ToDouble(kvp.Value) / Convert.ToDouble(120);
+                int capacity = 100;
+                dr["Capacidad"] = capacity;
+                dr["CantidadCamiones"] = 2;
+                double d = Convert.ToDouble(kvp.Value) / Convert.ToDouble(capacity);
                 dr["Necesarios"] = (int)Math.Ceiling(d);
                 dt2.Rows.Add(dr);
             }
@@ -204,7 +169,7 @@ namespace Store
 
         private void button3_Click(object sender, EventArgs e)
         {
-            WriteLogs logs = new WriteLogs();
+            WriteLogs logs = WriteLogs.GetInstance();
             logs.Show();
         }
     }

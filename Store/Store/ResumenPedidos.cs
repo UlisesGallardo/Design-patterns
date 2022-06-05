@@ -117,7 +117,7 @@ namespace Store
 
             if (PassSimulation)
             {
-                DialogResult dialogResult = MessageBox.Show("La simulación ha tenido éxito.\nCantidad de producto sobrante: "+sobrante.ToString()+ " productos.\n¿Desea continuar con el surtido de productos?", "Simulación Exitosa.", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dialogResult = MessageBox.Show("La simulación ha tenido éxito.\nCantidad de producto sobrante: "+sobrante.ToString()+ " productos.\n¿Desea continuar con el surtido de productos?\nSe mostrarán las tiendas ordenadas según el mayor beneficio", "Simulación Exitosa.", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.Yes)
                 {
                     foreach (Form forms in Application.OpenForms)

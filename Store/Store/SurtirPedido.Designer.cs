@@ -48,7 +48,7 @@ namespace Store
             // 
             this.NombreTienda.AutoSize = true;
             this.NombreTienda.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NombreTienda.Location = new System.Drawing.Point(713, 9);
+            this.NombreTienda.Location = new System.Drawing.Point(643, 9);
             this.NombreTienda.Name = "NombreTienda";
             this.NombreTienda.Size = new System.Drawing.Size(109, 46);
             this.NombreTienda.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace Store
             // 
             // ImagenInfo
             // 
-            this.ImagenInfo.Location = new System.Drawing.Point(24, 58);
+            this.ImagenInfo.Location = new System.Drawing.Point(35, 142);
             this.ImagenInfo.Name = "ImagenInfo";
             this.ImagenInfo.Size = new System.Drawing.Size(313, 304);
             this.ImagenInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

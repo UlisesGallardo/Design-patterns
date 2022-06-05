@@ -17,14 +17,16 @@ namespace Store
         List<Tienda> _tiendas;
         List<Bitmap> _imagenes;
 
-        private int ComprarTiendas(Tienda x, Tienda y)
+        List<KeyValuePair<Tienda, Bitmap>> _lista_ordenada;
+
+        private int Comparar(KeyValuePair<Tienda, Bitmap> x, KeyValuePair<Tienda, Bitmap> y) 
         {
-            int sum1 = 0, sum2 =0;
-            foreach(Producto p in x.Productos)
+            int sum1 = 0, sum2 = 0;
+            foreach (Producto p in x.Key.Productos)
             {
                 sum1 += Int32.Parse(p.Cantidad);
             }
-            foreach (Producto p in y.Productos)
+            foreach (Producto p in y.Key.Productos)
             {
                 sum2 += Int32.Parse(p.Cantidad);
             }
@@ -32,6 +34,7 @@ namespace Store
             if (sum1 > sum2) return -1;
             return 1;
         }
+
 
         public int index;
         public List<Tienda> Tiendas
@@ -61,23 +64,19 @@ namespace Store
         {
             string[] allfiles = Directory.GetFiles(Directory.GetCurrentDirectory() + "\\Pedidos", "*.*", SearchOption.AllDirectories);
             int NTiendas = allfiles.Length;
-            _imagenes = new List<Bitmap>();
-            _tiendas = new List<Tienda>();
+            _lista_ordenada = new List<KeyValuePair<Tienda, Bitmap>>();
             for (int i = 0; i < NTiendas; i++)
             {
                 Image img;
                 using (var bmpTemp = new Bitmap(allfiles[i]))
                 {
-                    img = new Bitmap(bmpTemp);   
+                    img = new Bitmap(bmpTemp);
                 }
                 _2DCodeAdapter adapter_to_QR = new _2DCodeAdapter("QR");
-                string str = adapter_to_QR.Read2dCode(allfiles[i]);
-                JObject json = JObject.Parse(str);
-                Tienda album = json.ToObject<Tienda>();
-                _imagenes.Add(img as Bitmap);
-                _tiendas.Add(album);
+                Tienda album = adapter_to_QR.TwoDImageCodeToStore(allfiles[i]);
+                _lista_ordenada.Add(new KeyValuePair<Tienda, Bitmap>(album, img as Bitmap));
             }
-
+            _lista_ordenada.Sort(Comparar);
             UpdateData();
         }
 
@@ -90,7 +89,12 @@ namespace Store
 
         private void SurtirPedido_Load(object sender, EventArgs e)
         {
-            _tiendas.Sort(ComprarTiendas);
+            _lista_ordenada = new List<KeyValuePair<Tienda, Bitmap>>();
+            for (int i=0; i<_tiendas.Count; i++)
+            {
+                _lista_ordenada.Add(new KeyValuePair<Tienda, Bitmap>(_tiendas[i], _imagenes[i]));
+            }
+            _lista_ordenada.Sort(Comparar);
             index = 0;
             if(_tiendas.Count ==1) button1.Text = "Finalizar";
             UpdateData();
@@ -101,17 +105,17 @@ namespace Store
             flowLayoutPanel1.Controls.Clear();
             NuevoPedido _nuevo = new NuevoPedido();
             _nuevo.previous = "surtir";
-            _nuevo.NuevaTienda = _tiendas[index];
-            NombreTienda.Text = _tiendas[index].NombreTienda;
-            ImagenInfo.Image = _imagenes[index];
-           flowLayoutPanel1.Controls.Add(_nuevo);
+            _nuevo.NuevaTienda = _lista_ordenada[index].Key;
+            NombreTienda.Text  = _lista_ordenada[index].Key.NombreTienda;
+            ImagenInfo.Image = _lista_ordenada[index].Value;
+            flowLayoutPanel1.Controls.Add(_nuevo);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (index == _tiendas.Count -1) finalizar();
-            if (index+1<_tiendas.Count)index++;
-            if (index == _tiendas.Count - 1) button1.Text = "Finalizar"; 
+            if (index == _lista_ordenada.Count -1) finalizar();
+            if (index+1< _lista_ordenada.Count)index++;
+            if (index == _lista_ordenada.Count - 1) button1.Text = "Finalizar"; 
             UpdateData();
         }
 

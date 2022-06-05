@@ -107,33 +107,22 @@ namespace Store
             {
                 string []words = allfiles[i].Split("\\");
                 string name = words[words.Length-1]; 
-                if(name == t.NombreTienda)
+                if(name == t.NombreTienda+".png")
                 {
                     flag = true;
                     break;
                 }
             }
 
-            if (flag)
+            if (flag && previous != "surtir")
             {
                     DialogResult dialogResult = MessageBox.Show("En el directorio actual, el nombre de la tienda está repetido!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;  
             }
 
-
-            string NTiendas = "0"+(allfiles.Length + 1).ToString();
-            t.ID_Tienda = NTiendas;
-
-            if (_tienda != null)
-            {
-                t.ID_Tienda = _tienda.ID_Tienda;
-                NTiendas = _tienda.ID_Tienda;
-            }
-            
-            _2DCodeAdapter adapter_to_QR = new _2DCodeAdapter("QR");
-            adapter_to_QR.Create2dCode(t);
-
-            adapter_to_QR.Save2dCode(Directory.GetCurrentDirectory() + "\\Pedidos\\img" + NTiendas + ".png");
+            StoreTo2Dcode adapter_to_QR = new _2DCodeAdapter("QR");
+            adapter_to_QR.Convert(t);
+            adapter_to_QR.Save2dCode(Directory.GetCurrentDirectory() + "\\Pedidos\\" + t.NombreTienda + ".png");
 
   
             if (previous == "general")
@@ -187,6 +176,8 @@ namespace Store
             }
             else
             {
+                nombreTienda01.Visible = false;
+                NombreTienda.Visible = false;
                 foreach (Form forms in Application.OpenForms)
                 {
                     string name = forms.Name;
@@ -199,7 +190,7 @@ namespace Store
                 }
             }
 
-                dt = new DataTable();
+            dt = new DataTable();
             dt.Columns.Add(new DataColumn("ID", typeof(int)));
             dt.Columns.Add(new DataColumn("Producto", typeof(string)));
             dt.Columns.Add(new DataColumn("Cantidad", typeof(int)));

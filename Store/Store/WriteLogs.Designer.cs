@@ -31,6 +31,7 @@ namespace Store
         {
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // guna2ComboBox1
@@ -43,7 +44,7 @@ namespace Store
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(28, 199);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(161, 32);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(194, 36);
             this.guna2ComboBox1.TabIndex = 0;
@@ -51,22 +52,33 @@ namespace Store
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(251, 12);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 74);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 426);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(519, 406);
             this.flowLayoutPanel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(195, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 15);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Selecciona una opción";
             // 
             // WriteLogs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(540, 488);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "WriteLogs";
             this.Text = "WriteLogs";
             this.Load += new System.EventHandler(this.WriteLogs_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -74,5 +86,6 @@ namespace Store
 
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }
