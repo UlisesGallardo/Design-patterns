@@ -1,2 +1,2 @@
-# Patterns-Design-
-Patterns Design in c#
+# Design patterns
+Design patterns in c#
